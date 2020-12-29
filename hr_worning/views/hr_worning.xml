@@ -1,0 +1,146 @@
+<odoo>
+  <data>
+    
+ 
+
+     <record id="hr_worning_view_form" model="ir.ui.view">
+       <field name="name">hr worning form</field>
+       <field name="model">hr.worning</field>
+       <field name="arch" type="xml">
+         <form string="Send SMS">
+           <header>
+             <button style="width:90px ;height:30px ;background-color: aqua;" name="action_Warning" type="object"       string="punishment"  class="oe_highligth" attrs="{'invisible': ['|','|','|','|',('max_boolean', '=', False),('punishment_type', '=', 'deduction'),('state', '=', 'done_worning'),('state', '=', 'cancel')]}" />
+             
+             <button style="width:90px ;height:30px ;background-color: aqua;" name="action_cancel" type="object"  string="Cancel"  class="oe_highligth" attrs="{'invisible': ['|',('state', '=', 'cancel'),('state', '=', 'done_worning')]}"/>
+             
+    <field name="state" widget="statusbar" statusbar_visible="draft,done_worning,cancel" />
+                    </header>
+           <sheet>
+             <group>
+               <field name="date"/>
+                <field name="employee_id"/>
+                <field name="name_worning"/>
+                <field name="reason"/>
+
+                <field name="max_boolean"  invisible="1"/>
+                 <field name="punishment_type"  attrs="{'invisible': [('max_boolean', '=', False)]}" />
+                 <field name="deduction_amount" attrs="{'invisible': ['|',('punishment_type', '=', 'dismiss'),('max_boolean', '=', False)]}" />
+
+                 
+                                                                
+             </group>
+           </sheet>
+         </form>
+       </field>
+     </record>
+
+     <record id="hr_worning_view_tree" model="ir.ui.view">
+       <field name="name">Hr Worning Tree</field>
+       <field name="model">hr.worning</field>
+       <field name="arch" type="xml">
+         <tree>
+                <field name="date"/>
+                <field name="employee_id"/>
+                <field name="name_worning"/>
+                <field name="reason"/>
+
+                <field name="punishment_type"/>
+                 <field name="state"/>
+         </tree>
+       </field>
+     </record>
+     <!-- model.name action window -->
+     
+     
+      <record id="hr_worning_action" model="ir.actions.act_window">
+            <field name="name">Hr Worning Action</field>
+            <field name="res_model">hr.worning</field>
+            <field name="view_id" ref="hr_worning_view_tree"/>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            
+        </record>
+
+     
+     <record id="hr_worning_action_byemployee" model="ir.actions.act_window">
+       <field name="name">Hr Worning Action</field>
+       <field name="type">ir.actions.act_window</field>
+       <field name="res_model">hr.worning</field>
+        <field name="domain">[ ('employee_id.user_id','=',uid)]</field>
+        
+       <field name="view_mode">tree</field>
+
+     </record>
+     
+     
+     <record id="hr_worning_conf_view_form" model="ir.ui.view">
+       <field name="name">hr worning form</field>
+       <field name="model">hr.worning.conf</field>
+       <field name="arch" type="xml">
+         <form string="Send SMS">
+           
+           <sheet>
+             <group>
+                <field name="name"/>
+                <field name="Max_number_worning"/>                            
+             </group>
+           </sheet>
+         </form>
+       </field>
+     </record>
+
+     <record id="hr_worning_conf_view_tree" model="ir.ui.view">
+       <field name="name">Hr Worning Tree</field>
+       <field name="model">hr.worning.conf</field>
+       <field name="arch" type="xml">
+         <tree>
+                <field name="name"/>
+                <field name="Max_number_worning"/> 
+         </tree>
+       </field>
+     </record>
+     <!-- model.name action window -->
+     <record id="hr_worning_conf_action" model="ir.actions.act_window">
+       <field name="name">Hr Worning Action</field>
+       <field name="type">ir.actions.act_window</field>
+       <field name="res_model">hr.worning.conf</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_type">form</field>
+     </record>
+     
+     <record id="view_employee_form_worning_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.loan.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="%(hr_worning_action_byemployee)d"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-calendar"
+                    groups="hr.group_hr_manager,hr.group_hr_user,base.default_user">
+                    <field name="number_of_worning" widget="statinfo" string="Worning"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+    
+   
+    
+<!-- This Menu Item Must have a parent -->
+
+ 
+
+     <!-- This Menu Item must have a parent and an action -->
+     
+         <menuitem id="worinig_menu_root_id" name="Worning"      groups="manager_access_group,employee_access_group" />
+         <menuitem id="worinig_menu_parent2_id" name="Worning" parent="worinig_menu_root_id" sequence ="1" />
+           <menuitem id="worinig_menu_parent_id" name="Worning" parent="worinig_menu_parent2_id"   action="hr_worning_action" sequence="2"   groups="manager_access_group"/>
+           
+           <menuitem id="worinig_menu_chaield_id" name="My Worning" parent="worinig_menu_parent2_id"    action="hr_worning_action_byemployee" groups="employee_access_group" sequence="3"/>
+
+      
+     <menuitem id="worinig_menu_conf_id" name="Worning Type"  parent="worinig_menu_parent2_id" action="hr_worning_conf_action" sequence="4"  groups="manager_access_group" />
+  
+  </data>
+</odoo>

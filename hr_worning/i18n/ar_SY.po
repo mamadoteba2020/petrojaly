@@ -1,0 +1,212 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_worning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-20 07:28+0000\n"
+"PO-Revision-Date: 2020-10-20 07:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_deduction_amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_max_boolean
+msgid "Boolean"
+msgstr "Boolean"
+
+#. module: hr_worning
+#: selection:hr.worning,state:0
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_create_uid
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_create_date
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_worning
+#: selection:hr.worning,punishment_type:0
+msgid "Deduction"
+msgstr "خصم من المرتب"
+
+#. module: hr_worning
+#: selection:hr.worning,punishment_type:0
+msgid "Dismiss"
+msgstr "فصل الموظف"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_display_name
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_worning
+#: selection:hr.worning,state:0
+msgid "Done Punishment"
+msgstr "تمت العقوبة"
+
+#. module: hr_worning
+#: selection:hr.worning,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_worning
+#: model:ir.model,name:hr_worning.model_hr_employee
+#: model:res.groups,name:hr_worning.employee_access_group
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_worning
+#: model:ir.actions.act_window,name:hr_worning.hr_worning_action
+#: model:ir.actions.act_window,name:hr_worning.hr_worning_action_byemployee
+#: model:ir.actions.act_window,name:hr_worning.hr_worning_conf_action
+msgid "Hr Worning Action"
+msgstr "إنذار"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_id
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning___last_update
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_write_uid
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_write_date
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_worning
+#: model:res.groups,name:hr_worning.manager_access_group
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_worning
+#: model:ir.ui.menu,name:hr_worning.worinig_menu_chaield_id
+msgid "My Worning"
+msgstr "إنذاراتي"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_name
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_employee_id
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_worning
+#: model:ir.model,name:hr_worning.model_hr_payslip
+msgid "Pay Slip"
+msgstr "ظرف المرتب"
+
+#. module: hr_worning
+#: model:ir.model,name:hr_worning.model_hr_payslip_line
+msgid "Payslip Line"
+msgstr "خط قسيمة الدفع"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_punishment_type
+msgid "Punishment Type"
+msgstr "نوع العقوبة"
+
+#. module: hr_worning
+#: model:ir.ui.view,arch_db:hr_worning.hr_worning_conf_view_form
+#: model:ir.ui.view,arch_db:hr_worning.hr_worning_view_form
+msgid "Send SMS"
+msgstr "Send SMS"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_employee_number_of_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_conf_Max_number_worning
+msgid "Warning Numbers"
+msgstr "عدد الإنذارات"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_name_worning
+msgid "Warning Type"
+msgstr "نوع الإنذار"
+
+#. module: hr_worning
+#: model:hr.salary.rule,name:hr_worning.hr_rule_worning
+#: model:ir.module.category,name:hr_worning.worning_management
+#: model:ir.ui.menu,name:hr_worning.worinig_menu_parent2_id
+#: model:ir.ui.menu,name:hr_worning.worinig_menu_parent_id
+#: model:ir.ui.menu,name:hr_worning.worinig_menu_root_id
+#: model:ir.ui.view,arch_db:hr_worning.view_employee_form_worning_inherit
+msgid "Worning"
+msgstr "إنذار"
+
+#. module: hr_worning
+#: model:ir.ui.menu,name:hr_worning.worinig_menu_conf_id
+msgid "Worning Type"
+msgstr "انواع الإنذار"
+
+#. module: hr_worning
+#: model:ir.model,name:hr_worning.model_hr_worning
+msgid "hr.worning"
+msgstr "hr.worning"
+
+#. module: hr_worning
+#: model:ir.model,name:hr_worning.model_hr_worning_conf
+msgid "hr.worning.conf"
+msgstr "hr.worning.conf"
+
+#. module: hr_worning
+#: model:ir.ui.view,arch_db:hr_worning.hr_worning_view_form
+msgid "punishment"
+msgstr "عقوبة"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_reason
+msgid "reason"
+msgstr "السبب"
+
+#. module: hr_worning
+#: model:ir.model.fields,field_description:hr_worning.field_hr_worning_seq
+msgid "seq"
+msgstr "seq"
+
+#. module: hr_worning
+#: code:addons/account/models/hr_worning.py:62
+#, python-format
+msgid ""
+"You cannot delete an Worning which is not draft or cancelled."
+msgstr ""
+"لا يمكنك حذف الانذار لانه غير مسودة أو ملغية."
